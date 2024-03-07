@@ -41,9 +41,9 @@ index 7a3bf7671a42..b99a75a8fa9b 100644
  #include <dt-bindings/reset/sun50i-h616-ccu.h>
  #include <dt-bindings/reset/sun50i-h6-r-ccu.h>
 +#include <dt-bindings/reset/sun8i-de2.h>
- #include <dt-bindings/thermal/thermal.h>
  
  / {
+ 	interrupt-parent = <&gic>;
 @@ -52,6 +55,12 @@ cpu3: cpu@3 {
  		};
  	};

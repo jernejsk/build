@@ -91,8 +91,8 @@
 	patches.armbian/arm64-dts-sun50i-h616-x96-mate-add-hdmi.patch
 	patches.armbian/arm64-dts-allwinner-h616-Add-device-node-for-SID.patch
 	patches.armbian/arm64-dts-allwinner-h616-Add-efuse_xlate-cpu-frequency-scaling-v1_6_2.patch
-	patches.armbian/arm64-dts-allwinner-h616-Add-thermal-sensor-and-thermal-zones.patch
-	patches.armbian/arm64-dts-allwinner-h616-Fix-thermal-zones-missing-trips.patch
+-	patches.armbian/arm64-dts-allwinner-h616-Add-thermal-sensor-and-thermal-zones.patch
+-	patches.armbian/arm64-dts-allwinner-h616-Fix-thermal-zones-missing-trips.patch
 	patches.armbian/drv-staging-fbtft-add-st7796s.patch
 	patches.armbian/drv-touchscreen-tsc2007-polling.patch
 	patches.armbian/drv-rgb-add-ws2812.patch
@@ -228,5 +228,5 @@
 -	patches.armbian/0029-arm64-dts-allwinner-h616-add-PWM-to-OKT507-C.patch
 	patches.armbian/0030-pwm-sun20i-modify-for-h616-support.patch
 	patches.armbian/0031-phy-motorcomm-add-support-for-yt8112b-and-clock.patch
--	patches.armbian/0032-net-stmmac-dwmac-sun8i-Prepare-for-second-EMAC-clock.patch
 	patches.armbian/0033-arm64-dts-allwinner-h616-add-myd-yt507h-board.patch
+	patches.armbian/0034-pinctrl-sunxi-h616-add-extra-gpio-banks.patch
