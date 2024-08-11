@@ -1,0 +1,52 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Jernej Skrabec <jernej.skrabec@gmail.com>
+Date: Sun, 11 Aug 2024 13:57:50 +0000
+Subject: Add OrangePi Zero2 SPI1 CS overlay
+
+Signed-off-by: Jernej Skrabec <jernej.skrabec@gmail.com>
+---
+ arch/arm64/boot/dts/allwinner/overlay/Makefile                         |  3 +-
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-spidev-cs-zero2.dtso | 14 ++++++++++
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm64/boot/dts/allwinner/overlay/Makefile b/arch/arm64/boot/dts/allwinner/overlay/Makefile
+index 24383cb63770..bb4cad2b4cf8 100644
+--- a/arch/arm64/boot/dts/allwinner/overlay/Makefile
++++ b/arch/arm64/boot/dts/allwinner/overlay/Makefile
+@@ -65,11 +65,12 @@ dtb-$(CONFIG_ARCH_SUNXI) += \
+ 	sun50i-h616-ws2812.dtbo \
+ 	sun50i-h616-light.dtbo \
+ 	sun50i-h616-i2c0-pi.dtbo \
+ 	sun50i-h616-i2c1-pi.dtbo \
+ 	sun50i-h616-i2c2-pi.dtbo \
+-	sun50i-h616-gpu.dtbo
++	sun50i-h616-gpu.dtbo \
++	sun50i-h616-spidev-cs-zero2.dtbo
+ 
+ scr-$(CONFIG_ARCH_SUNXI) += \
+ 	sun50i-a64-fixup.scr \
+ 	sun50i-h5-fixup.scr \
+ 	sun50i-h6-fixup.scr \
+diff --git a/arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-spidev-cs-zero2.dtso b/arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-spidev-cs-zero2.dtso
+new file mode 100644
+index 000000000000..c5b298eda6fc
+--- /dev/null
++++ b/arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-spidev-cs-zero2.dtso
+@@ -0,0 +1,14 @@
++/dts-v1/;
++/plugin/;
++
++
++/ {
++	compatible = "allwinner,sun50i-h616";
++
++	fragment@0 {
++		target = <&spi1>;
++		__overlay__ {
++			cs-gpios = <&pio 7 9 0>, <&pio 2 10 0>; /* PH9, PC10 */
++		};
++	};
++};
+-- 
+Created with Armbian build tools https://github.com/armbian/build
+
